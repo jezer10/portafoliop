@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: 'Acumin';
+        font-weight: 400;
+        font-style: normal;
+        src: url(./assets/fonts/Acumin.ttf) format("truetype");
+    }
+
+    @font-face {
+        font-family: 'Billion Dreams';
+        font-weight: 400;
+        font-style: normal;
+        src: url(./assets/fonts/Billion-Dreams.ttf) format("truetype");
+    }
+}
