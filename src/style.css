@@ -3,18 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    @apply font-billion-dreams;
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 200;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }  @font-face {
+    font-family: "Acumin";
+    font-weight: 300;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 400;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
 
-    @font-face {
-        font-family: 'Acumin';
-        font-weight: 400;
-        font-style: normal;
-        src: url(./assets/fonts/Acumin.ttf) format("truetype");
-    }
-
-    @font-face {
-        font-family: 'Billion Dreams';
-        font-weight: 400;
-        font-style: normal;
-        src: url(./assets/fonts/Billion-Dreams.ttf) format("truetype");
-    }
+  @font-face {
+    font-family: "Billion Dreams";
+    font-weight: 400;
+    font-style: normal;
+    src: url(./assets/fonts/Billion-Dreams.ttf) format("truetype");
+  }
 }
