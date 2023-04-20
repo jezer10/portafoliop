@@ -11,7 +11,8 @@
     font-weight: 200;
     font-style: normal;
     src: url(./assets/fonts/Acumin.ttf) format("truetype");
-  }  @font-face {
+  }
+  @font-face {
     font-family: "Acumin";
     font-weight: 300;
     font-style: normal;
@@ -23,7 +24,36 @@
     font-style: normal;
     src: url(./assets/fonts/Acumin.ttf) format("truetype");
   }
-
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 500;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 600;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 700;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 800;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Acumin";
+    font-weight: 900;
+    font-style: normal;
+    src: url(./assets/fonts/Acumin.ttf) format("truetype");
+  }
   @font-face {
     font-family: "Billion Dreams";
     font-weight: 400;
