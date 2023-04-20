@@ -247,7 +247,7 @@ export default {
         <div>Sobre mí</div>
         <div class="w-72 h-96 relative">
           <img
-            src="@/assets/images/polarr.png"
+            src="@/assets/images/profile_image.png"
             class="h-full w-full object-cover"
           />
           <div
@@ -256,8 +256,19 @@ export default {
         </div>
       </div>
     </div>
-    <div class="w-1/2">
-      <div class="text-5xl">Noelia Artist</div>
+    <div class="w-1/2 flex items-center justify-center">
+      <div class="flex flex-col max-w-md gap-4">
+        <div class="flex flex-col items-center">
+          <div class="text-8xl text-center">Noelia Artist</div>
+          <div class="h-2 bg-primary-light w-1/2"></div>
+        </div>
+        <div class="text-2xl">
+          Hola soy Noelia Sancarranco, diseñadora gráfica y vivo en la ciudad de
+          Piura. Me encanta trabajar con todos y estoy emocionada de ofrecer mis
+          diseños, sé que ayudarán a mis futuros clientes a ser mas competitivos
+          y hacer crecer su mercado.
+        </div>
+      </div>
     </div>
   </div>
   <div class="h-screen py-12 px-8">
