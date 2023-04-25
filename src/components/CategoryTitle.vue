@@ -10,30 +10,30 @@ export default {
 </script>
 
 <template>
-  <div class="h-screen">
+  <div class=" sm:h-screen">
     <div
-      class="h-full flex items-center justify-center text-[120px] leading-[9rem] relative"
+      class="h-full flex items-center justify-center text-sm sm:text-[120px] leading-[9rem] relative"
     >
       <img
         src="@/assets/images/owao.png"
         class="absolute w-full h-full -z-10"
       />
-      <div class="absolute inset-0 h-full w-full p-20">
+      <div class="absolute inset-0 h-full w-full p-4 sm:p-20">
         <div class="h-full w-full relative">
           <div
-            class="top-0 left-0 bg-primary-light absolute w-1/2 h-full pt-6 pl-6 -z-20"
+            class="top-0 left-0 bg-primary-light absolute w-1/2 h-full pt-2 pl-2 sm:pt-6 sm:pl-6 -z-20"
           >
             <div class="h-full w-full bg-white">
-              <div class="flex flex-col gap-8 pt-4 pl-4">
-                <div class="flex flex-row text-4xl text-primary-light gap-8">
+              <div class="flex flex-col gap-2 sm:gap-8   sm:pt-4 sm:pl-4">
+                <div class="flex flex-row text-4xl text-primary-light gap-2 sm:gap-8">
                   <Sparkle
-                    class="w-12 h-12 text-primary-light"
+                    class="w-4 h-4 sm:w-12 sm:h-12 text-primary-light"
                     v-for="i in 4"
                   />
                 </div>
-                <div class="flex flex-col text-4xl text-primary-light gap-8">
+                <div class="flex flex-col text-4xl text-primary-light gap-2 sm:gap-8">
                   <Sparkle
-                    class="w-12 h-12 text-primary-light"
+                    class="w-4 h-4 sm:w-12 sm:h-12 text-primary-light"
                     v-for="i in 3"
                   />
                 </div>

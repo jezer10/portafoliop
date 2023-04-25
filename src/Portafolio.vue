@@ -208,7 +208,7 @@ export default {
 
 <template>
   <div class="h-screen bg-primary-light text-white">
-    <div class="flex items-center justify-center h-full gap-8">
+    <div class="flex sm:flex-row items-center justify-center h-full gap-8">
       <div class="h-full py-16">
         <img
           class="flex-none h-full object-contain"
@@ -216,20 +216,18 @@ export default {
         />
       </div>
       <div class="leading-1 text-white flex flex-col">
-        <div class="text-6xl">Noelia Sancarranco</div>
-        <img src="@/assets/images/portafolio_logo.png" alt="" />
-        <!-- <div
-          class="text-[220px] break-words w-[27rem] flex flex-col leading-[10.5rem] outlined-white-text"
-        >
-          <div class="font-bold">Portafolio</div>
-        </div> -->
-        <div class="text-6xl">Diseño Gráfico / Ilustración</div>
+        <div class="text-xs sm:text-6xl">Noelia Sancarranco</div>
+        <img src="@/assets/images/portafolio_logo.png" />
+
+        <div class="text-xs sm:text-6xl">Diseño Gráfico / Ilustración</div>
       </div>
     </div>
   </div>
-  <div class="h-screen font-acumin">
+  <div class="sm:h-screen font-acumin">
     <div class="flex flex-col h-full relative justify-between">
-      <div class="flex gap-6 justify-center py-4 uppercase text-xl font-light">
+      <div
+        class="flex gap-6 justify-center py-4 uppercase text-xs sm:text-xl font-light"
+      >
         <span class="h-full truncate">IDENTIDAD CORPORATIVA</span>
         <span class="h-full truncate">DISEÑO EDITORIAL</span>
         <span class="h-full truncate">ILUSTRACIÓN DIGITAL</span>
@@ -237,32 +235,41 @@ export default {
         <span class="h-full truncate">PUBLICIDAD</span>
         <span class="h-full truncate">FOTOGRAFÍA</span>
       </div>
-      <div class="flex items-center justify-center absolute inset-0 p-48">
-        <img class="h-full" src="@/assets/images/name_logo.png" />
+      <div
+        class="flex items-center justify-center p-4 sm:absolute inset-0 w-full sm:p-48"
+      >
+        <img
+          class="h-full w-full object-contain"
+          src="@/assets/images/name_logo.png"
+        />
       </div>
-      <div class="p-4 flex justify-between">
-        <div class="flex items-center gap-2" v-for="contact in contacts">
+      <div class="p-4 flex flex-col sm:flex-row justify-between w-full">
+        <div class="flex items-center gap-2 w-full" v-for="contact in contacts">
           <div
-            class="rounded-full w-12 h-12 text-white bg-black flex items-center justify-center text-2xl"
+            class="rounded-full flex-none w-4 h-4 sm:w-10 sm:h-10 text-white bg-black flex items-center justify-center text-xs sm:text-xl"
           >
             <i :class="contact.icon"></i>
           </div>
-          <div class="text-xl">{{ contact.value }}</div>
+          <div class="text-sm sm:text-xl truncate w-full">
+            {{ contact.value }}
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="h-screen flex p-8">
-    <div class="flex gap-8 w-1/2">
-      <div class="flex flex-col gap-4">
+  <div class="h-screen flex flex-col sm:flex-row p-8">
+    <div class="flex flex-col sm:flex-row gap-8 w-full sm:w-1/2">
+      <div
+        class="sm:flex flex-col text-4xl gap-2 p-2 sm:gap-8 sm:p-8 text-yellow-400 hidden"
+      >
         <Sparkle
-          class="w-12 h-12 text-primary-light animate-pulse"
+          class="w-4 h-4 sm:w-12 sm:h-12 text-primary-light"
           v-for="i in 4"
         />
       </div>
-      <div class="font-bold text-5xl flex flex-col gap-8">
+      <div class="font-bold text-xs sm:text-5xl flex flex-col gap-8">
         <div>Sobre mí</div>
-        <div class="w-72 h-96 relative">
+        <div class="w-full sm:w-72 sm:h-96 relative">
           <img
             src="@/assets/images/profile_image.png"
             class="h-full w-full object-cover"
@@ -273,13 +280,13 @@ export default {
         </div>
       </div>
     </div>
-    <div class="w-1/2 flex items-center justify-center">
+    <div class="w-full sm:w-1/2 flex items-center justify-center">
       <div class="flex flex-col max-w-md gap-4">
         <div class="flex flex-col items-center">
-          <div class="text-8xl text-center">Noelia Artist</div>
+          <div class="text-xs sm:text-8xl text-center">Noelia Artist</div>
           <div class="h-2 bg-primary-light w-1/2"></div>
         </div>
-        <div class="text-2xl font-acumin">
+        <div class="text-xs sm:text-2xl font-acumin">
           Hola soy Noelia Sancarranco, diseñadora gráfica y vivo en la ciudad de
           Piura. Me encanta trabajar con todos y estoy emocionada de ofrecer mis
           diseños, sé que ayudarán a mis futuros clientes a ser mas competitivos
@@ -290,16 +297,21 @@ export default {
   </div>
   <div class="h-screen py-12 px-8">
     <div class="w-full h-full flex">
-      <div class="flex flex-col text-4xl gap-8 p-8 text-yellow-400">
-        <Sparkle class="w-12 h-12 text-primary-light" v-for="i in 4" />
+      <div
+        class="flex flex-col text-4xl gap-2 p-2 sm:gap-8 sm:p-8 text-yellow-400"
+      >
+        <Sparkle
+          class="w-4 h-4 sm:w-12 sm:h-12 text-primary-light"
+          v-for="i in 4"
+        />
       </div>
       <div class="flex items-center w-full flex-col">
-        <h1 class="text-9xl">Hobbies</h1>
+        <h1 class="text-md sm:text-9xl">Hobbies</h1>
         <div class="flex flex-col items-center gap-4">
           <div class="grid grid-cols-4 gap-4">
             <div
               v-for="hobbie in hobbies"
-              class="w-32 h-32 text-black border-black border-2 flex items-center justify-center rounded-full text-6xl hover:bg-black hover:text-white transition-colors"
+              class="w-12 h-12 sm:w-32 sm:h-32 text-black border-black border-2 flex items-center justify-center rounded-full text-md sm:text-6xl hover:bg-black hover:text-white transition-colors"
             >
               <i :class="[hobbie.icon]"></i>
             </div>
@@ -308,41 +320,42 @@ export default {
       </div>
     </div>
   </div>
-  <div class="h-screen py-12 px-8">
+  <div class="h-screen p-4 sm:py-12 sm:px-8">
     <div class="w-full h-full flex">
-      <div class="flex flex-col text-4xl gap-8 p-8 text-yellow-400">
-        <Sparkle class="w-12 h-12 text-primary-light" v-for="i in 4" />
+      <div
+        class="flex flex-col text-4xl gap-2 p-2 sm:gap-8 sm:p-8 text-yellow-400"
+      >
+        <Sparkle
+          class="w-4 h-4 sm:w-12 sm:h-12 text-primary-light"
+          v-for="i in 4"
+        />
       </div>
-      <div class="flex items-center w-full flex-col">
-        <h1 class="text-9xl">Dominio de software</h1>
-        <div class="flex flex-col items-center gap-4">
-          <div class="flex gap-4">
-            <img
-              src="./assets/images/photoshop.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            />
-            <img
-              src="./assets/images/illustrator.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            />
-            <img
-              src="./assets/images/lightroom.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            />
-            <img
-              src="./assets/images/indesign.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            />
-          </div>
-          <div class="flex gap-4">
-            <img
-              src="./assets/images/polarr.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            /><img
-              src="./assets/images/figma.png"
-              class="rounded-full w-48 h-48 bg-cover"
-            />
-          </div>
+      <div class="flex flex-col items-center w-full">
+        <h1 class="text-md sm:text-9xl">Dominio de software</h1>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <img
+            src="./assets/images/photoshop.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          />
+          <img
+            src="./assets/images/illustrator.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          />
+          <img
+            src="./assets/images/lightroom.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          />
+          <img
+            src="./assets/images/indesign.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          />
+          <img
+            src="./assets/images/polarr.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          /><img
+            src="./assets/images/figma.png"
+            class="rounded-full w-12 h-12 sm:w-48 sm:h-48 bg-cover"
+          />
         </div>
       </div>
     </div>
@@ -350,14 +363,16 @@ export default {
   <div class="h-screen font-acumin p-8">
     <div class="flex items-center gap-16 h-full">
       <div>
-        <div class="text-[160px] leading-none flex flex-col font-bold">
+        <div
+          class="text-sm sm:text-[160px] leading-none flex flex-col font-bold"
+        >
           <div class="text-orange-500">CON</div>
           <div class="outlined-text">TENI</div>
           <div class="text-orange-500">DO</div>
         </div>
       </div>
       <div>
-        <div class="flex flex-col text-6xl">
+        <div class="flex flex-col text-sm sm:text-6xl">
           <div class="flex gap-4" v-for="(k, i) in summary">
             <div class="outlined-text">{{ `0${i + 1}` }}</div>
             <div class="text-orange-500 uppercase">{{ k }}</div>
@@ -367,44 +382,48 @@ export default {
     </div>
   </div>
   <CategoryTitle title="Branding" />
-  <div class="h-screen">
-    <div class="h-full flex">
-      <div class="w-1/2 flex flex-col items-center justify-center h-full p-32">
+  <div class="sm:h-screen">
+    <div class="h-full flex flex-col sm:flex-row">
+      <div
+        class="w-full sm:w-1/2 flex flex-col items-center justify-center h-full p-32"
+      >
         <img src="./assets/images/name_logo.png" class="h-full" />
 
         <img src="./assets/images/logo.png" class="h-full" />
       </div>
       <div
-        class="w-1/2 bg-primary-dark p-16 font-acumin text-white flex flex-col gap-8"
+        class="w-full sm:w-1/2 bg-primary-dark p-16 font-acumin text-white flex flex-col gap-8"
       >
         <div>
-          <div class="text-4xl">LOGO NAMING</div>
-          <div class="text-2xl">
+          <div class="text-xs sm:text-4xl">LOGO NAMING</div>
+          <div class="text-xs sm:text-2xl">
             El nombre es parte de lo que soy, de mi vida y de todo lo que
             conlleva, de mis sueños y aspiraciones, entonces, ¿qué podría ser un
             símbolo más icónico que mi nombre?
           </div>
         </div>
         <div>
-          <div class="text-4xl">TIPOGRAFÍA</div>
-          <div class="font-billion-dreams uppercase text-3xl">
+          <div class="text-xs sm:text-4xl">TIPOGRAFÍA</div>
+          <div class="font-billion-dreams uppercase text-xs sm:text-3xl">
             a b c d e f g h i j k l m n ñ o p q r s t u v w x y z
           </div>
-          <div class="font-billion-dreams text-3xl">
+          <div class="font-billion-dreams text-xs sm:text-3xl">
             a b c d e f g h i j k l m n ñ o p q r s t u v w x y z
           </div>
         </div>
         <div>
-          <div class="text-4xl">COLORES CORPORATIVOS</div>
-          <div class="flex gap-4">
-            <div class="w-12 h-12 rounded-full bg-black"></div>
-            <div class="w-12 h-12 rounded-full bg-white"></div>
-            <div class="w-12 h-12 rounded-full bg-primary-light"></div>
+          <div class="text-xs sm:text-4xl">COLORES CORPORATIVOS</div>
+          <div class="flex gap-2 sm:gap-4">
+            <div class="w-4 h-4 sm:w-12 sm:h-12 rounded-full bg-black"></div>
+            <div class="w-4 h-4 sm:w-12 sm:h-12 rounded-full bg-white"></div>
+            <div
+              class="w-4 h-4 sm:w-12 sm:h-12 rounded-full bg-primary-light"
+            ></div>
           </div>
         </div>
         <div>
-          <div class="text-4xl">ILUSTRACIÓN</div>
-          <div class="text-2xl">El personaje soy yo en versión animada</div>
+          <div class="text-xs sm:text-4xl">ILUSTRACIÓN</div>
+          <div class="text-xs sm:text-2xl">El personaje soy yo en versión animada</div>
         </div>
       </div>
     </div>
@@ -571,7 +590,7 @@ export default {
 
   <div class="h-screen">
     <img
-      src="@/assets/images/ice_age_banner.png"
+      src="@/assets/images/magazine_banner.png"
       alt="polarr"
       class="w-full h-full object-cover"
     />
@@ -590,10 +609,12 @@ export default {
       class="w-full h-full object-cover"
     />
   </div>
-  <div class="h-screen bg-primary-light">
-    <div class="flex flex-col items-center justify-center h-full text-7xl">
-      <img src="@/assets/images/name_logo.png" class="h-96" />
-      <div class="text-white">¡Gracias por ver mi portafolio!</div>
+  <div class="p-4 sm:p-0 sm:h-screen bg-primary-light">
+    <div class="flex flex-col items-center justify-center h-full">
+      <img src="@/assets/images/name_logo.png" class="w-full sm:h-96" />
+      <div class="text-white text-xs sm:text-7xl">
+        ¡Gracias por ver mi portafolio!
+      </div>
     </div>
   </div>
 </template>
