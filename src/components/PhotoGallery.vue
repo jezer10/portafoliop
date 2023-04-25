@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="h-screen">
+  <div class="sm:h-screen">
     <div class="h-full flex flex-col sm:flex-row">
       <div class="w-full sm:w-1/2 h-full">
         <slot name="image" class="w-full h-full" />
@@ -34,7 +34,7 @@ export default {
               <div class="flex gap-2">
                 <div
                   v-for="item in informationObject.platforms"
-                  class="flex gap-2 items-center rounded-full px-4 py-2 border text-black border-black"
+                  class="flex gap-2 items-center rounded-full px-2 py-0.5 sm:px-4 sm:py-2 text-[8px] border text-black border-black"
                 >
                   <img
                     :src="item.icon"

@@ -209,24 +209,29 @@ export default {
 <template>
   <div class="h-screen bg-primary-light text-white">
     <div class="flex sm:flex-row items-center justify-center h-full gap-8">
-      <div class="h-full py-16">
+      <div
+        class="w-12 h-12 top-4 left-0 sm:h-full sm:py-16 absolute sm:relative"
+      >
         <img
-          class="flex-none h-full object-contain"
+          class="flex-none h-full w-full object-contain"
           src="./assets/images/logo.png"
         />
       </div>
-      <div class="leading-1 text-white flex flex-col">
-        <div class="text-xs sm:text-6xl">Noelia Sancarranco</div>
-        <img src="@/assets/images/portafolio_logo.png" />
-
-        <div class="text-xs sm:text-6xl">Diseño Gráfico / Ilustración</div>
+      <div
+        class="leading-1 text-white flex flex-col items-center text-3xl sm:text-6xl"
+      >
+        <div>Noelia Sancarranco</div>
+        <div class="w-full p-12">
+          <img src="@/assets/images/portafolio_logo.png" class="w-full h-full" />
+        </div>
+        <div>Diseño Gráfico / Ilustración</div>
       </div>
     </div>
   </div>
   <div class="sm:h-screen font-acumin">
     <div class="flex flex-col h-full relative justify-between">
       <div
-        class="flex gap-6 justify-center py-4 uppercase text-xs sm:text-xl font-light"
+        class="flex flex-col text-center sm:flex-row gap-2 sm:gap-6 justify-center py-4 uppercase text-xs sm:text-xl font-light"
       >
         <span class="h-full truncate">IDENTIDAD CORPORATIVA</span>
         <span class="h-full truncate">DISEÑO EDITORIAL</span>
@@ -236,7 +241,7 @@ export default {
         <span class="h-full truncate">FOTOGRAFÍA</span>
       </div>
       <div
-        class="flex items-center justify-center p-4 sm:absolute inset-0 w-full sm:p-48"
+        class="flex items-center justify-center p-8 sm:absolute inset-0 w-full sm:p-48"
       >
         <img
           class="h-full w-full object-contain"
@@ -244,7 +249,10 @@ export default {
         />
       </div>
       <div class="p-4 flex flex-col sm:flex-row justify-between w-full">
-        <div class="flex items-center gap-2 w-full" v-for="contact in contacts">
+        <div
+          class="flex items-center text-center sm:text-start gap-2 w-full"
+          v-for="contact in contacts"
+        >
           <div
             class="rounded-full flex-none w-4 h-4 sm:w-10 sm:h-10 text-white bg-black flex items-center justify-center text-xs sm:text-xl"
           >
@@ -295,7 +303,7 @@ export default {
       </div>
     </div>
   </div>
-  <div class="h-screen py-12 px-8">
+  <div class="sm:h-screen py-12 px-8">
     <div class="w-full h-full flex">
       <div
         class="flex flex-col text-4xl gap-2 p-2 sm:gap-8 sm:p-8 text-yellow-400"
@@ -320,7 +328,7 @@ export default {
       </div>
     </div>
   </div>
-  <div class="h-screen p-4 sm:py-12 sm:px-8">
+  <div class="sm:h-screen p-4 sm:py-12 sm:px-8">
     <div class="w-full h-full flex">
       <div
         class="flex flex-col text-4xl gap-2 p-2 sm:gap-8 sm:p-8 text-yellow-400"
@@ -360,11 +368,11 @@ export default {
       </div>
     </div>
   </div>
-  <div class="h-screen font-acumin p-8">
-    <div class="flex items-center gap-16 h-full">
+  <div class="sm:h-screen font-acumin p-8">
+    <div class="flex flex-col sm:flex-row items-center gap-8 sm:gap-16 h-full">
       <div>
         <div
-          class="text-sm sm:text-[160px] leading-none flex flex-col font-bold"
+          class="text-4xl sm:text-[160px] leading-none flex flex-col font-bold"
         >
           <div class="text-orange-500">CON</div>
           <div class="outlined-text">TENI</div>
@@ -423,7 +431,9 @@ export default {
         </div>
         <div>
           <div class="text-xs sm:text-4xl">ILUSTRACIÓN</div>
-          <div class="text-xs sm:text-2xl">El personaje soy yo en versión animada</div>
+          <div class="text-xs sm:text-2xl">
+            El personaje soy yo en versión animada
+          </div>
         </div>
       </div>
     </div>
@@ -609,9 +619,12 @@ export default {
       class="w-full h-full object-cover"
     />
   </div>
-  <div class="p-4 sm:p-0 sm:h-screen bg-primary-light">
+  <div class="p-4 sm:p-0 h-screen bg-primary-light">
     <div class="flex flex-col items-center justify-center h-full">
-      <img src="@/assets/images/name_logo.png" class="w-full sm:h-96" />
+      <img
+        src="@/assets/images/name_logo.png"
+        class="w-full object-contain sm:h-96"
+      />
       <div class="text-white text-xs sm:text-7xl">
         ¡Gracias por ver mi portafolio!
       </div>
