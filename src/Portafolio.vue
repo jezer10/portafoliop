@@ -210,7 +210,7 @@ export default {
   <div class="h-screen bg-primary-light text-white">
     <div class="flex sm:flex-row items-center justify-center h-full gap-8">
       <div
-        class="w-12 h-12 top-4 left-0 sm:h-full sm:py-16 absolute sm:relative"
+        class="w-12 h-12 top-4 left-0 sm:h-full sm:w-auto sm:py-16 absolute sm:relative"
       >
         <img
           class="flex-none h-full w-full object-contain"
